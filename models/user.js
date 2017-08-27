@@ -12,21 +12,3 @@ const userSchema = new Schema({
     updated_date: Date
 });
 const User = module.exports = mongoose.model("User", userSchema);
-
-module.exports.getUsers = function(callback) {
-    User.find(callback);
-};
-
-module.exports.getUserById = function(id, callback) {
-    User.findById(id, callback);
-};
-
-module.exports = updateUser = function(user, callback) {
-    User.name = user.name;
-    User.password = user.password;
-    User.location = user.location;
-    User.meta = user.meta;
-    User.updated_date = user.updated_date;
-}
-
-
