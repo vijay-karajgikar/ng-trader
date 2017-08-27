@@ -1,0 +1,19 @@
+{
+  "name": "ng-trader",
+  "version": "1.0.0",
+  "description": "Trading application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vijay-karajgikar/ng-trader.git"
+  },
+  "author": "Vijay Karajgikar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vijay-karajgikar/ng-trader/issues"
+  },
+  "homepage": "https://github.com/vijay-karajgikar/ng-trader#readme"
+}
