@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const path = require('path');
 const port = 1368 || process.env.PORT;
 const app = express();
 const userRouter = require('./routes/userRoutes');
@@ -17,9 +18,10 @@ mongoose.connection.on('connected', () => {
 
 app.use(bodyParser.json());
 app.use('/user', userRouter);
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-    res.send("Home Page for ng-trader application");
+    res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
 app.listen(port, () => {
