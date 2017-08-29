@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/vijay-karajgikar/ng-trader/issues"
   },
-  "homepage": "https://github.com/vijay-karajgikar/ng-trader#readme"
+  "homepage": "https://github.com/vijay-karajgikar/ng-trader#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.9"
+  }
 }
