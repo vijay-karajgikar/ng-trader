@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const path = require('path');
+const morgan = require('morgan');
 const port = 1368 || process.env.PORT;
 const app = express();
 const userRouter = require('./routes/userRoutes');
@@ -15,10 +16,11 @@ mongoose.connection.on('connected', () => {
     console.log("Connection to mongodb successful");
     console.log("**************************************************");
 });
-
+app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use('/user', userRouter);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'node_modules')));
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/index.html'));
