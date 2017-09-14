@@ -1,0 +1,34 @@
+<!-- <header>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand">Navbar</a>
+        <ul class="nav justify-content-end">
+            <a [routerLink]="['/login']">Login</a>
+            <a [routerLink]="['/register']">Register</a>
+        </ul>
+    </nav>
+</header>
+<router-outlet></router-outlet>
+
+<footer class="text-center">
+    Copyright &copy; 2017
+</footer> -->
+
+
+<div class="main-layout-transparent mdl-layout mdl-layout-js">
+    <header class="mdl-layout__header mdl-layout__header--transparent">
+        <div class="mdl-layout__header-row">
+            
+            <span class="mdl-layout-title">ngTrader - Trading Application</span>
+            <div class="mdl-layout-spacer"></div>
+
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" [routerLink]="['/']">Home</a>
+                <a class="mdl-navigation__link" [routerLink]="['/login']">Login</a>
+                <a class="mdl-navigation__link" [routerLink]="['/register']">Register</a>
+                <a class="mdl-navigation__link" [routerLink]="['/profile']">Profile</a>
+            </nav>
+
+        </div>
+    </header>
+</div>
+<router-outlet></router-outlet>
