@@ -7,19 +7,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var RegisterComponent = /** @class */ (function () {
-    function RegisterComponent() {
+var HomeComponent = /** @class */ (function () {
+    function HomeComponent() {
     }
-    RegisterComponent.prototype.onSubmit = function (user) {
-        this.user = user;
-    };
-    RegisterComponent = __decorate([
+    HomeComponent = __decorate([
         core_1.Component({
-            selector: 'register',
-            templateUrl: './app/register.component/register.component.html'
+            selector: 'home',
+            templateUrl: './app/home.component/home.component.html'
         })
-    ], RegisterComponent);
-    return RegisterComponent;
+    ], HomeComponent);
+    return HomeComponent;
 }());
-exports.RegisterComponent = RegisterComponent;
-//# sourceMappingURL=register.component.js.map
+exports.HomeComponent = HomeComponent;
+//# sourceMappingURL=home.component.js.map

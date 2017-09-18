@@ -1,6 +1,7 @@
 (function(global) {
 
-  System.config({    
+  System.config({
+
     map: {
       app: '/dist',
       '@angular/core': '@angular/core/bundles/core.umd.js',
@@ -13,10 +14,11 @@
       '@angular/forms': '@angular/forms/bundles/forms.umd.js',
       'rxjs': 'rxjs'
     },
-    // /bundles/platform-browser-dynamic.umd.js
+
     packages: {
       app: { main: './main.js', defaultExtension: 'js'},
       rxjs: { defaultExtension: 'js'}
     }
   });
+
 })(this);
