@@ -12,7 +12,7 @@ mongoose.connect("mongodb://localhost:27017/ngtrader");
 mongoose.connection.on('error', (err) => {
     console.log("Error connecting to mongo db");
 });
-mongoose.connection.on('connected', () => {    
+mongoose.connection.on('connected', () => {
     console.log("Connection to mongodb successful");
     console.log("**************************************************");
 });
@@ -22,11 +22,11 @@ app.use('/user', userRouter);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 
-app.get('/', (req, res) => {
+app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
 app.listen(port, () => {
     console.log("**************************************************");
-    console.log("ng-trader application - http://localhost:" + port);    
+    console.log("ng-trader application - http://localhost:" + port);
 });

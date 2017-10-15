@@ -16,7 +16,8 @@ var RegisterComponent = /** @class */ (function () {
     RegisterComponent = __decorate([
         core_1.Component({
             selector: 'register',
-            templateUrl: './app/register.component/register.component.html'
+            templateUrl: './app/register.component/register.component.html',
+            styleUrls: ['./app/register.component/register.component.css']
         })
     ], RegisterComponent);
     return RegisterComponent;

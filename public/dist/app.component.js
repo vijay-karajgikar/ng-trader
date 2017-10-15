@@ -13,7 +13,8 @@ var AppComponent = /** @class */ (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'trader',
-            templateUrl: './app/app.component.html'
+            templateUrl: './app/app.component.html',
+            styleUrls: ['./app/app.component.css']
         })
     ], AppComponent);
     return AppComponent;
