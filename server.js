@@ -8,14 +8,22 @@ const app = express();
 const userRouter = require('./routes/userRoutes');
 const userModel = require('./models/user');
 
-mongoose.connect("mongodb://localhost:27017/ngtrader");
-mongoose.connection.on('error', (err) => {
-    console.log("Error connecting to mongo db");
+
+mongoose.Promise = Promise;
+mongoose.connect("mongodb://localhost:27017/ngtrader", {
+    useMongoClient: true, promiseLibrary: global.Promise
 });
-mongoose.connection.on('connected', () => {
-    console.log("Connection to mongodb successful");
+var database = mongoose.connection;
+database.on('error', (err) => {
+   console.log('Error connecting to mongo database');
+   console.log(err);
+});
+database.once('open', () => {
+    console.log("**************************************************");
+    console.log("Connected to mongoDB - ngtrader");
     console.log("**************************************************");
 });
+
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use('/user', userRouter);
