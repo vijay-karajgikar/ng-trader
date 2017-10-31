@@ -1,6 +1,9 @@
-import { Component }    from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 import { User }         from '../models/User';
+
 
 @Component({
     selector: 'register',
@@ -8,12 +11,29 @@ import { User }         from '../models/User';
     styleUrls: [ './app/register.component/register.component.css' ]
 })
 
-export class RegisterComponent {
+export class RegisterComponent implements OnInit {
 
-    user: User;
+    userForm: FormGroup;
+    httpClient: HttpClient;
+    showMessage: Boolean;
 
-    onSubmit(user: User) {
-        this.user = user;
-
+    constructor(httpClient: HttpClient) {
+        this.httpClient = httpClient;
     }
+
+    //Initialize the Form
+    ngOnInit() {
+        this.userForm = new FormGroup({
+            fullname: new FormControl('', [Validators.required, Validators.minLength(5)]),
+            email: new FormControl('', [Validators.required, Validators.minLength(10)]),
+            password: new FormControl('', [Validators.required, Validators.minLength(5)]),
+            confirmPassword: new FormControl('', [Validators.required, Validators.minLength(5)]),
+            location: new FormControl(''),
+            age: new FormControl(''),
+            website: new FormControl('')
+        });
+    }
+
+
+
 }

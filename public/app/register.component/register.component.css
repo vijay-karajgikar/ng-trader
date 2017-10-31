@@ -1,0 +1,60 @@
+.main-container {
+    width: 50%;
+    margin: 0 auto !important;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+}
+
+.header {
+    display:block;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 20pt;
+}
+
+.form-container {
+    padding: 10px;
+}
+
+.error-panel {
+    min-width: 100px;
+    background-color: red;
+    float:left;
+}
+
+.form-group {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.form-input-control {
+    font-size: 12pt;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 300px;
+}
+
+.form-input-label {
+    width: 500px;
+}
+
+/*
+.form-input-control {
+    padding: 10px;
+    margin: 0px;
+    display: block;
+    margin-right: 5px;
+    font-size:12pt;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.form-input-control:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    padding: 10px;
+    border: 1px solid rgba(81, 203, 238, 1);
+}
+*/

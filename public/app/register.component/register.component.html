@@ -1,1 +1,57 @@
-<h1>Register Component</h1>
+<div class="main-container">
+    <strong class="header"><i class="fa fa-user-plus"></i>  Create an Account</strong>
+
+    <div class="form-container">
+        <form [formGroup]="userForm">
+            <div class="form-group">
+                <label>
+                    <strong class="form-input-label">Name: </strong>
+                    <input type="text" formControlName="fullname" class="form-input-control">
+                </label>
+
+                <label>
+                    <strong class="form-input-label">Email: </strong>
+                    <input type="text" formControlName="email" class="form-input-control">
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <strong class="form-input-label">Password: </strong>
+                    <input type="text" formControlName="password" class="form-input-control">
+                </label>
+
+                <label>
+                    <strong class="form-input-label">Re-enter password: </strong>
+                    <input type="text" formControlName="confirmPassword" class="form-input-control">
+                </label>
+            </div>
+
+
+            <div class="form-group">
+                <label>
+                    <strong class="form-input-label">Location: </strong>
+                    <input type="text" formControlName="location" class="form-input-control">
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <strong class="form-input-label">Age: </strong>
+                    <input type="text" formControlName="age" class="form-input-control">
+                </label>
+
+                <label>
+                    <strong class="form-input-label">Website: </strong>
+                    <input type="text" formControlName="website" class="form-input-control">
+                </label>
+            </div>
+
+
+        </form>
+    </div>
+    <div class="message-panel" *ngIf="showMessage">
+        <p>This is right container</p>
+    </div>
+
+</div>
