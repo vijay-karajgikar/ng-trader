@@ -19,11 +19,12 @@ var RegisterComponent = /** @class */ (function () {
     //Initialize the Form
     RegisterComponent.prototype.ngOnInit = function () {
         this.userForm = new forms_1.FormGroup({
-            fullname: new forms_1.FormControl('', [forms_1.Validators.required, forms_1.Validators.minLength(5)]),
+            firstName: new forms_1.FormControl('', [forms_1.Validators.required, forms_1.Validators.minLength(5)]),
+            lastName: new forms_1.FormControl('', [forms_1.Validators.required, forms_1.Validators.minLength(5)]),
             email: new forms_1.FormControl('', [forms_1.Validators.required, forms_1.Validators.minLength(10)]),
             password: new forms_1.FormControl('', [forms_1.Validators.required, forms_1.Validators.minLength(5)]),
             confirmPassword: new forms_1.FormControl('', [forms_1.Validators.required, forms_1.Validators.minLength(5)]),
-            location: new forms_1.FormControl(''),
+            address: new forms_1.FormControl(''),
             age: new forms_1.FormControl(''),
             website: new forms_1.FormControl('')
         });
