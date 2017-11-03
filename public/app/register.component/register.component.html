@@ -1,57 +1,59 @@
-<div class="main-container">
-    <strong class="header"><i class="fa fa-user-plus"></i>  Create an Account</strong>
-
-    <div class="form-container">
-        <form [formGroup]="userForm">
-            <div class="form-group">
-                <label>
-                    <strong class="form-input-label">Name: </strong>
-                    <input type="text" formControlName="fullname" class="form-input-control">
-                </label>
-
-                <label>
-                    <strong class="form-input-label">Email: </strong>
-                    <input type="text" formControlName="email" class="form-input-control">
-                </label>
-            </div>
-
-            <div class="form-group">
-                <label>
-                    <strong class="form-input-label">Password: </strong>
-                    <input type="text" formControlName="password" class="form-input-control">
-                </label>
-
-                <label>
-                    <strong class="form-input-label">Re-enter password: </strong>
-                    <input type="text" formControlName="confirmPassword" class="form-input-control">
-                </label>
-            </div>
-
-
-            <div class="form-group">
-                <label>
-                    <strong class="form-input-label">Location: </strong>
-                    <input type="text" formControlName="location" class="form-input-control">
-                </label>
-            </div>
-
-            <div class="form-group">
-                <label>
-                    <strong class="form-input-label">Age: </strong>
-                    <input type="text" formControlName="age" class="form-input-control">
-                </label>
-
-                <label>
-                    <strong class="form-input-label">Website: </strong>
-                    <input type="text" formControlName="website" class="form-input-control">
-                </label>
-            </div>
-
-
-        </form>
+<main class="body-container">
+    <div class="header-container">
+        <strong class="header-text"><i class='fa fa-user-plus'></i> Create an account</strong>
     </div>
-    <div class="message-panel" *ngIf="showMessage">
-        <p>This is right container</p>
-    </div>
+    <div class="flex-center">
+        <div class="form-input-panel">
+            <form [formGroup]="userForm">
+                <ul>
+                    <li>
+                        <label class="form-input-label">Name:<span class="required">*</span></label>
+                        <input type="text" formControlName="firstName" placeholder="First name" class="field-divided"> &nbsp;
+                        <input type="text" formControlName="lastName" placeholder="Last name" class="field-divided">
+                    </li>
+                    <li>
+                        <label class="form-input-label">Email:<span class="required">*</span></label>
+                        <input type="email" formControlName="email" placeholder="email address" class="field-long">
+                    </li>
+                    <li>
+                        <label class="form-input-label">Password:<span class="required">*</span></label>
+                        <input type="password" formControlName="password" placeholder="password" class="field-divided"> &nbsp;
+                        <input type="password" formControlName="confirmpassword" placeholder="retype password" class="field-divided">
+                    </li>
+                    <li>
+                        <label class="form-input-label">Address:</label>
+                        <input type="text" formControlName="address" class="field-long">
+                    </li>
+                    <li>
+                        <label class="form-input-label">Age:</label>
+                        <input type="text" formControlName="age" class="field-divided">
+                    </li>
+                    <li>
+                        <label class="form-input-label">Website:</label>
+                        <input type="text" formControlName="website" class="field-divided">
+                    </li>
 
-</div>
+
+                    <li>
+                    </li>
+
+
+
+
+                </ul>
+                <div class="footer">
+                    <p class="link">Already a member? <a href="/login">Login</a></p>
+                    <button type="button" (click)="onSubmit()" class="field-divided">Create</button>
+                </div>
+            </form>
+        </div>
+        <div class="error-panel">
+            <ul class="error-ul">
+                <li>First Item</li>
+                <li>Second Item</li>
+                <li>Third Item</li>
+                <li>Fourth Item</li>
+            </ul>
+        </div>
+    </div>
+</main>
